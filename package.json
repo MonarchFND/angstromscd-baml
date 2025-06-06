@@ -3,6 +3,11 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun run --bun src/index.ts",
+    "generate": "bun run scripts/generate-baml.js",
+    "test": "node examples/test-insights.js"
+  },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/bun": "latest",
@@ -15,5 +20,8 @@
     "@boundaryml/baml": "^0.89.0",
     "@hono/node-server": "^1.14.3",
     "hono": "^4.7.10"
-  }
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
 }

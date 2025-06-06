@@ -1,5 +1,15 @@
 // Learn more about clients at https://docs.boundaryml.com/docs/snippets/clients/overview
 
+// Local Ollama client for medical analysis
+client<llm> LocalOllama {
+  provider openai
+  options {
+    base_url "http://localhost:11434/v1"
+    model "llama3.2:latest"
+    api_key "ollama"
+  }
+}
+
 client<llm> CustomGPT4o {
   provider openai
   options {
